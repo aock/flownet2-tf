@@ -19,7 +19,13 @@ Linux:
 ### Install google nsync from source with cmake, if not installed by tensorflow
 https://github.com/google/nsync
 
+### If "cuda_config.h" not found:
+cd ~/.local/lib/python3.5/site-packages/tensorflow/include/tensorflow/stream_executor/cuda
+wget https://raw.githubusercontent.com/tensorflow/tensorflow/master/third_party/toolchains/gpus/cuda/cuda/cuda_config.h
 
+## If "cuda/include/cuda.h" could not be found in "kernel_helper.h":
+vim ~/.local/lib/python3.5/site-packages/tensorflow/include/tensorflow/core/util/cuda_kernel_helper.h
+change the include of "cuda/include/cuda.h" to "tensorflow/core/platform/cuda.h"
 
 You must have CUDA installed:
 `make all`
