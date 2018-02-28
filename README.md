@@ -16,6 +16,11 @@ pip install tensorflow
 Linux:
 `sudo apt-get install python-tk`
 
+### Install google nsync from source with cmake, if not installed by tensorflow
+https://github.com/google/nsync
+
+
+
 You must have CUDA installed:
 `make all`
 
